@@ -1,303 +1,644 @@
+Lo, yeh raha pura code:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from demo.shadow-themes.com/html/bringer/portfolio-post03.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 May 2024 11:42:33 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page Title -->
-    <title>Webomize | Gaming Power</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
-    <!-- Config -->
+    <title>Webomize | SEO & Digital Marketing Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/config.css">
-    <!-- Libraries -->
     <link type="text/css" rel="stylesheet" href="css/libs.css">
-    <!-- Template Styles -->
     <link type="text/css" rel="stylesheet" href="css/style.css">
-    <!-- Responsive -->
     <link type="text/css" rel="stylesheet" href="css/responsive.css">
-
-    <!-- Favicon -->
     <link rel="icon" href="img/favicon.png" sizes="32x32">
+    <style>
+        .wbm-portfolio-section {
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+        .wbm-portfolio-section:last-of-type {
+            border-bottom: none;
+        }
+        .wbm-cat-number {
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.4;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .wbm-cat-title {
+            font-size: 44px;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+        .wbm-cat-desc {
+            font-size: 17px;
+            line-height: 1.75;
+            opacity: 0.65;
+            margin-bottom: 40px;
+            max-width: 640px;
+        }
+        .wbm-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+        .wbm-tag {
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+        .wbm-service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .wbm-service-grid.cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .wbm-service-card {
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 32px 28px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .wbm-service-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(255,255,255,0.25);
+        }
+        .wbm-service-icon {
+            font-size: 36px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .wbm-service-card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .wbm-service-card-desc {
+            font-size: 14px;
+            opacity: 0.6;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .wbm-deliverables {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .wbm-deliverables li {
+            font-size: 13px;
+            opacity: 0.55;
+            padding: 6px 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .wbm-deliverables li::before {
+            content: "→";
+            opacity: 0.4;
+            flex-shrink: 0;
+        }
+        .wbm-process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .wbm-process-step {
+            border-radius: 12px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 28px 24px;
+        }
+        .wbm-step-number {
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.3;
+            margin-bottom: 14px;
+            display: block;
+        }
+        .wbm-step-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .wbm-step-desc {
+            font-size: 13px;
+            opacity: 0.55;
+            line-height: 1.65;
+        }
+        .wbm-stat-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 60px;
+        }
+        .wbm-stat-item {
+            background: rgba(0,0,0,0.35);
+            padding: 32px 24px;
+            text-align: center;
+        }
+        .wbm-stat-number {
+            font-size: 36px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .wbm-stat-label {
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.4;
+        }
+        .wbm-audit-card {
+            border-radius: 12px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 40px;
+        }
+        .wbm-checklist {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px 40px;
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 0;
+        }
+        .wbm-checklist li {
+            font-size: 14px;
+            opacity: 0.65;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.5;
+        }
+        .wbm-checklist li::before {
+            content: "✓";
+            color: #6ee7b7;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .wbm-meta-row {
+            display: flex;
+            gap: 40px;
+            margin-top: 48px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            flex-wrap: wrap;
+        }
+        .wbm-meta-item label {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.35;
+            margin-bottom: 6px;
+        }
+        .wbm-meta-item span {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .wbm-audit-cta {
+            border-radius: 16px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.12);
+            padding: 56px 48px;
+            text-align: center;
+        }
+        .wbm-audit-cta h2 {
+            margin-bottom: 12px;
+        }
+        .wbm-audit-cta p {
+            opacity: 0.6;
+            font-size: 17px;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .wbm-audit-badge {
+            display: inline-block;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            opacity: 0.45;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 5px 14px;
+            border-radius: 999px;
+        }
+        @media (max-width: 1024px) {
+            .wbm-process-grid { grid-template-columns: repeat(2, 1fr); }
+            .wbm-stat-strip { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 960px) {
+            .wbm-service-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .wbm-cat-title { font-size: 30px; }
+            .wbm-service-grid,
+            .wbm-service-grid.cols-2,
+            .wbm-process-grid { grid-template-columns: 1fr; }
+            .wbm-stat-strip { grid-template-columns: repeat(2, 1fr); }
+            .wbm-checklist { grid-template-columns: 1fr; }
+            .wbm-audit-card,
+            .wbm-audit-cta { padding: 28px 20px; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
+
     <header id="bringer-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
-        <!-- Desktop Header -->
         <div class="bringer-header-inner">
-            <!-- Header Logo -->
             <div class="bringer-header-lp">
                 <a href="index.html" class="bringer-logo">
-                    <img src="img/logo.png" alt="Webomize." width="150" height="24">
+                    <img src="img/logo.png" alt="Webomize" width="150" height="24">
                 </a>
             </div>
-            <!-- Main Menu -->
             <div class="bringer-header-mp">
                 <nav class="bringer-nav">
                     <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
-                        <li >
-                            <a href="index.html">Home</a>    
-                        </li>
-                            
+                        <li><a href="index.html">Home</a></li>
                         <li>
                             <a href="#">About Us</a>
                             <ul class="sub-menu">
-                                <li>
-                                    <a href="about-us.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="about-me.html">About Me</a>
-                                </li>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="about-me.html">About Me</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Pages</a>
+                            <a href="#">Resources</a>
                             <ul class="sub-menu">
-                                <li>
-                                    <a href="services.html">Our Services</a>
-                                </li>                                <li>
-                                    <a href="pricing.html">Pricing</a>
-                                </li>
-                                <li>
-                                    <a href="faq.html">F.A.Q.</a>
-                                </li>
-                                <li>
-                                    <a href="testimonials.html">Testimonials</a>
-                                </li>
+                                <li><a href="services.html">Our Services</a></li>
+                                <li><a href="service-details.html">Service Details</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="faq.html">F.A.Q.</a></li>
+                                <li><a href="testimonials.html">Testimonials</a></li>
                             </ul>
                         </li>
                         <li class="current-menu-parent">
                             <a href="#">Portfolio</a>
                             <ul class="sub-menu">
                                 <li></li>
-                                <li>
-                                    <a href="portfolio-post01.html">Portfolio Details 01</a>
-                                </li>
-                                <li>
-                                    <a href="portfolio-post02.html">Portfolio Details 02</a>
-                                </li>
-                                <li class="current-menu-item">
-                                    <a href="portfolio-post03.html">Portfolio Details 03</a>
-                                </li>
+                                <li><a href="portfolio-post01.html">Portfolio Details 01</a></li>
+                                <li><a href="portfolio-post02.html">Portfolio Details 02</a></li>
+                                <li class="current-menu-item"><a href="portfolio-post03.html">Portfolio Details 03</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="contacts.html">Contacts</a>
-                        </li>
+                        <li><a href="contacts.html">Contacts</a></li>
                     </ul>
                 </nav>
             </div>
-            <!-- Header Button -->
             <div class="bringer-header-rp">
                 <a href="contacts.html" class="bringer-button">Get a FREE Quote</a>
             </div>
         </div>
-        <!-- Mobile Header -->
         <div class="bringer-mobile-header-inner">
             <a href="index.html" class="bringer-logo">
-                <img src="img/logo.png" alt="Webomize." width="150" height="24">
+                <img src="img/logo.png" alt="bringer." width="150" height="24">
             </a>
             <a href="#" class="bringer-mobile-menu-toggler">
                 <i class="bringer-menu-toggler-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </i>
             </a>
         </div>
     </header>
 
-    <!-- Page Main -->
     <main id="bringer-main">
         <div class="stg-container">
-            <!-- Section: Page Title -->
-            <section class="backlight-bottom">
-                <div class="stg-row stg-bottom-gap-l">
-                    <div class="stg-col-8 stg-tp-bottom-gap" data-appear="fade-right" data-unload="fade-left">
-                        <h2>Gaming Power</h2>
-                    </div>
-                    <div class="stg-col-4 stg-tp-col-8 stg-tp-offset-4 tp-align-right stg-m-col-9 stg-m-offset-3" data-appear="fade-left" data-unload="fade-right">
-                        <p>Dive into the electrifying journey where Bringer's strategic gameplay and creative firepower elevated Xbox to the pinnacle of the gaming arena.</p>
-                    </div>
-                </div>
 
-                <!-- Slider -->
-                <div class="bringer-slider-wrapper bringer-masked-block stg-bottom-gap" data-appear="fade-up" data-delay="100" data-unload="fade-up">
-                    <div class="swiper bringer-slider bringer-masked-media" data-autoplay="2000" data-duration="800" data-effect="slide">
-                        <div class="swiper-wrapper">
-                            <!-- Slider Item -->
-                            <div class="swiper-slide">
-                                <img src="img/portfolio/portfolio03/slider01.jpg" alt="Gaming Power" width="1920" height="1080">
-                            </div>
-                            <!-- Slider Item -->
-                            <div class="swiper-slide">
-                                <img src="img/portfolio/portfolio03/slider02.jpg" alt="Gaming Power" width="1920" height="1080">
-                            </div>
-                            <!-- Slider Item -->
-                            <div class="swiper-slide">
-                                <img src="img/portfolio/portfolio03/slider03.jpg" alt="Gaming Power" width="1920" height="1080">
-                            </div>
-                        </div>
-                    </div><!-- .bringer-slider -->
-                    <!-- Masked Navigation -->
-                    <div class="bringer-slider-nav bringer-masked-content at-bottom-right">
-                        <a href="#" class="bringer-slider-prev">
-                            <span class="bringer-icon bringer-icon-chevron-left"></span>
-                        </a>
-                        <a href="#" class="bringer-slider-next">
-                            <span class="bringer-icon bringer-icon-chevron-right"></span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Meta -->
-                <div class="bringer-hero-info-line" data-stagger-appear="fade-up" data-delay="200" data-unload="fade-up">
-                    <div class="bringer-meta">
-                        Client: <span>Macrosoft</span>
-                    </div>
-                    <div class="bringer-meta">
-                        Service: <span>Marketing</span>
-                    </div>
-                    <div class="bringer-meta">
-                        Date: <span>October '2023</span>
-                    </div>
-                </div><!-- .bringer-hero-info-line -->
-            </section>
-
-            <!-- Section: The Challenge -->
+            <!-- Page Heading -->
             <section>
-                <div class="stg-row">
-                    <div class="stg-col-6 stg-tp-bottom-gap-l" data-unload="fade-left">
-                        <div class="bringer-sticky-block">
-                            <h2 data-appear="fade-right">The Challenge</h2>
-                        </div>
+                <div class="stg-row stg-bottom-gap-l stg-tp-bottom-gap">
+                    <div class="stg-col-6 stg-tp-bottom-gap">
+                        <h1 class="bringer-post-title" data-appear="fade-up" data-unload="fade-left">SEO & Digital Marketing</h1>
                     </div>
-                    <div class="stg-col-6 stg-tp-col-10 stg-tp-offset-2 stg-m-col-11 stg-m-offset-1" data-unload="fade-right">
-                        <div class="stg-bottom-gap-section stg-tp-bottom-gap-l" data-appear="fade-up">
-                            <h4>The Story</h4>
-                            <p>Xbox found itself stuck in a galactic holding pattern. They were the established player, the veteran spaceship captain, but a nimble rival had stolen the spotlight with flashy consoles and a hyper-connected community. Sales were plateauing, social media buzz was sputtering, and the once-dominant brand felt eclipsed.</p>
-                        </div>
-                        <div class="stg-bottom-gap-section stg-tp-bottom-gap-l" data-appear="fade-up">
-                            <h4>Reaching for the Stars</h4>
-                            <p>Desperate to reignite the engines and reclaim their place as gaming royalty, Xbox sought out Bringer, a nimble agency known for its audacious campaigns and laser-focused strategies. The challenge was clear: propel Xbox beyond Earthly limitations, recapture the hearts of gamers, and forge a new path to gaming domination.</p>
-                        </div>
-                        <div data-appear="fade-up">
-                            <h4>Our Approach</h4>
-                            <p class="bringer-large-text">We knew reaching gamers meant speaking their language. We embraced a data-driven approach, analyzing trends, strategies, and audience preferences.</p>
-                            <p>From this, we distilled the essence of the next-gen Xbox: cutting-edge technology, a diverse gaming universe, and a welcoming community for every player, from casual explorers to hardcore space marines.</p>
-                        </div>
+                    <div class="stg-col-6 stg-tp-col-9 stg-tp-offset-3 align-right" data-appear="fade-up" data-delay="100" data-unload="fade-right">
+                        <p>A full breakdown of what we do — from technical SEO audits and on-page optimization to paid campaigns and content strategy. No fluff, no fake numbers.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Section: Gallery -->
-            <section data-tp-padding="none">
-                <div class="bringer-grid-3cols" data-stagger-appear="fade-up" data-stagger-unload="fade-left">
-                    <div>
-                        <img class="bringer-lazy" src="img/null.png" data-src="img/portfolio/portfolio03/image01.jpg" alt="Gaming Power" data-speed="0.9" data-m-speed="1" width="800" height="1200">
+            <!-- Stat Strip -->
+            <div class="wbm-stat-strip" data-appear="fade-up">
+                <div class="wbm-stat-item">
+                    <span class="wbm-stat-number">3+</span>
+                    <span class="wbm-stat-label">Years in SEO</span>
+                </div>
+                <div class="wbm-stat-item">
+                    <span class="wbm-stat-number">40+</span>
+                    <span class="wbm-stat-label">Websites Optimized</span>
+                </div>
+                <div class="wbm-stat-item">
+                    <span class="wbm-stat-number">6</span>
+                    <span class="wbm-stat-label">Core Service Areas</span>
+                </div>
+                <div class="wbm-stat-item">
+                    <span class="wbm-stat-number">100%</span>
+                    <span class="wbm-stat-label">White-Hat Only</span>
+                </div>
+            </div>
+
+            <!-- Category 01: SEO Services -->
+            <section class="wbm-portfolio-section backlight-top">
+                <div data-appear="fade-up">
+                    <span class="wbm-cat-number">Category 01</span>
+                    <h2 class="wbm-cat-title">Search Engine Optimization</h2>
+                    <p class="wbm-cat-desc">End-to-end SEO — from crawling your site for technical issues to building the content and links that move you up the rankings. Everything is done manually, transparently, and with a clear goal: more qualified traffic.</p>
+                    <div class="wbm-tags">
+                        <span class="wbm-tag">Technical SEO</span>
+                        <span class="wbm-tag">On-Page SEO</span>
+                        <span class="wbm-tag">Link Building</span>
+                        <span class="wbm-tag">Keyword Research</span>
+                        <span class="wbm-tag">Core Web Vitals</span>
+                        <span class="wbm-tag">Google Search Console</span>
                     </div>
-                    <div>
-                        <img class="bringer-lazy" src="img/null.png" data-src="img/portfolio/portfolio03/image02.jpg" alt="Gaming Power" width="800" height="1200">
+                </div>
+                <div class="wbm-service-grid" data-stagger-appear="fade-up" data-stagger-delay="100">
+                    <div class="wbm-service-card">
+                        <span class="wbm-service-icon">🔍</span>
+                        <div class="wbm-service-card-title">Technical SEO Audit</div>
+                        <div class="wbm-service-card-desc">A full crawl of your website to identify issues that are silently blocking your rankings — before we fix anything else.</div>
+                        <ul class="wbm-deliverables">
+                            <li>Crawl error & indexing report</li>
+                            <li>Core Web Vitals analysis</li>
+                            <li>Broken links & redirect audit</li>
+                            <li>Schema markup review</li>
+                            <li>Mobile usability check</li>
+                        </ul>
                     </div>
-                    <div>
-                        <img class="bringer-lazy" src="img/null.png" data-src="img/portfolio/portfolio03/image03.jpg" alt="Gaming Power" data-speed="1.1" data-m-speed="1" width="800" height="1200">
+                    <div class="wbm-service-card">
+                        <span class="wbm-service-icon">📄</span>
+                        <div class="wbm-service-card-title">On-Page Optimization</div>
+                        <div class="wbm-service-card-desc">Keyword-focused optimization of every element on the page — titles, headings, content, internal links, and meta data.</div>
+                        <ul class="wbm-deliverables">
+                            <li>Keyword research & mapping</li>
+                            <li>Title & meta description rewrites</li>
+                            <li>Header structure (H1–H3) cleanup</li>
+                            <li>Internal linking strategy</li>
+                            <li>Image alt text & compression</li>
+                        </ul>
+                    </div>
+                    <div class="wbm-service-card">
+                        <span class="wbm-service-icon">🔗</span>
+                        <div class="wbm-service-card-title">Link Building</div>
+                        <div class="wbm-service-card-desc">Manual, white-hat link acquisition from relevant websites — no PBNs, no spam, no shortcuts that get you penalized.</div>
+                        <ul class="wbm-deliverables">
+                            <li>Competitor backlink gap analysis</li>
+                            <li>Guest post outreach</li>
+                            <li>Business directory submissions</li>
+                            <li>Niche-relevant link placements</li>
+                            <li>Monthly backlink report</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wbm-meta-row">
+                    <div class="wbm-meta-item">
+                        <label>Approach</label>
+                        <span>White-Hat Only</span>
+                    </div>
+                    <div class="wbm-meta-item">
+                        <label>Reporting</label>
+                        <span>Monthly PDF Report</span>
+                    </div>
+                    <div class="wbm-meta-item">
+                        <label>Tools Used</label>
+                        <span>Ahrefs, GSC, Screaming Frog</span>
                     </div>
                 </div>
             </section>
-            
-            <!-- Section: Solution -->
-            <section>
-                <div class="stg-row">
-                    <div class="stg-col-6 stg-tp-bottom-gap-l" data-appear="fade-right" data-unload="fade-left">
-                        <h2>The Solution</h2>
+
+            <!-- Category 02: Local SEO -->
+            <section class="wbm-portfolio-section">
+                <div data-appear="fade-up">
+                    <span class="wbm-cat-number">Category 02</span>
+                    <h2 class="wbm-cat-title">Local SEO & Google Business</h2>
+                    <p class="wbm-cat-desc">If your customers are nearby, they need to find you first. We optimize your Google Business Profile, local citations, and location pages so you show up when it matters most — "near me" searches.</p>
+                    <div class="wbm-tags">
+                        <span class="wbm-tag">Google Business Profile</span>
+                        <span class="wbm-tag">Local Citations</span>
+                        <span class="wbm-tag">NAP Consistency</span>
+                        <span class="wbm-tag">Review Strategy</span>
+                        <span class="wbm-tag">Maps Ranking</span>
                     </div>
-                    <div class="stg-col-6 stg-tp-col-10 stg-tp-offset-2 stg-m-col-11 stg-m-offset-1" data-appear="fade-left" data-unload="fade-right">
-                        <h4>Mission Accomplished</h4>
-                        <p class="bringer-large-text">The campaign was a resounding success. We blasted Xbox back into the stratosphere, achieving:</p>
-                        <ul class="bringer-marked-list">
-                            <li><span class="bringer-highlight">A supernova of brand awareness:</span> Xbox went from a stagnant star to a beacon attracting attention across the gaming universe.</li>
-                            <li><span class="bringer-highlight">Social media engagement that broke intergalactic records:</span> Gamers couldn't stop talking about Xbox, filling feeds with memes, discussions, and more.</li>
-                            <li><span class="bringer-highlight">Hardware sales soaring like a starfighter breaking orbit:</span> Xbox reclaimed its dominance, leaving competitors trailing in the cosmic dust.</li>
-                            <li><span class="bringer-highlight">Industry awards and accolades:</span> The campaign was hailed as a masterclass in rebranding, cementing Xbox's position as a gaming juggernaut.</li>
+                </div>
+                <div class="wbm-service-grid cols-2" data-stagger-appear="fade-up" data-stagger-delay="100">
+                    <div class="wbm-service-card">
+                        <span class="wbm-service-icon">📍</span>
+                        <div class="wbm-service-card-title">Google Business Profile Optimization</div>
+                        <div class="wbm-service-card-desc">A fully optimized GBP listing increases your visibility in the local pack and drives calls and direction requests directly from search.</div>
+                        <ul class="wbm-deliverables">
+                            <li>Category & attribute optimization</li>
+                            <li>Service & product listing setup</li>
+                            <li>Photo & post optimization</li>
+                            <li>Q&A management</li>
+                            <li>Review response templates</li>
+                        </ul>
+                    </div>
+                    <div class="wbm-service-card">
+                        <span class="wbm-service-icon">🗂️</span>
+                        <div class="wbm-service-card-title">Local Citations & Directory Listings</div>
+                        <div class="wbm-service-card-desc">Consistent business information across the web signals trust to Google — we build and clean up your citations across 50+ directories.</div>
+                        <ul class="wbm-deliverables">
+                            <li>NAP audit & inconsistency fixes</li>
+                            <li>Submission to top local directories</li>
+                            <li>Industry-specific directory placement</li>
+                            <li>Duplicate listing removal</li>
+                            <li>Citation tracking report</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wbm-meta-row">
+                    <div class="wbm-meta-item">
+                        <label>Best For</label>
+                        <span>Brick & Mortar, Service Area Businesses</span>
+                    </div>
+                    <div class="wbm-meta-item">
+                        <label>Directories Covered</label>
+                        <span>50+ Listings</span>
+                    </div>
+                    <div class="wbm-meta-item">
+                        <label>Status</label>
+                        <span>✅ Available Now</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category 03: Content & Digital Marketing -->
+            <section class="wbm-portfolio-section">
+                <div data-appear="fade-up">
+                    <span class="wbm-cat-number">Category 03</span>
+                    <h2 class="wbm-cat-title">Content & Digital Marketing</h2>
+                    <p class="wbm-cat-desc">Search rankings are built on content. We research the exact topics your audience is searching for, write content that earns rankings, and distribute it across the right channels to maximize reach.</p>
+                    <div class="wbm-tags">
+                        <span class="wbm-tag">SEO Blog Writing</span>
+                        <span class="wbm-tag">Content Strategy</span>
+                        <span class="wbm-tag">Email Marketing</span>
+                        <span class="wbm-tag">Social Media Management</span>
+                        <span class="wbm-tag">Landing Pages</span>
+                    </div>
+                </div>
+                <div class="wbm-service-grid" data-stagger-appear="fade-up" data-stagger-delay="100">
+                    <div class="wbm-service-card">
+                        <span class="wbm-service-icon">✍️</span>
+                        <div class="wbm-service-card-title">SEO Blog & Content Writing</div>
+                        <div class="wbm-service-card-desc">Long-form, search-optimized articles written around keyword clusters your buyers are already searching for.</div>
+                        <ul class="wbm-deliverables">
+                            <li>Topic & keyword cluster research</li>
+                            <li>Competitor content gap analysis</li>
+                            <li>SEO-optimized article writing</li>
+                            <li>Internal linking plan</li>
+                            <li>Schema markup (FAQ, Article)</li>
+                        </ul>
+                    </div>
+                    <div class="wbm-service-card">
+                        <span class="wbm-service-icon">📧</span>
+                        <div class="wbm-service-card-title">Email Marketing Setup</div>
+                        <div class="wbm-service-card-desc">From list setup to automated welcome sequences — we build the email flows that turn new subscribers into repeat customers.</div>
+                        <ul class="wbm-deliverables">
+                            <li>Platform setup (Mailchimp / Klaviyo)</li>
+                            <li>Welcome & nurture sequence</li>
+                            <li>Newsletter template design</li>
+                            <li>List segmentation strategy</li>
+                            <li>Open rate & click reporting</li>
+                        </ul>
+                    </div>
+                    <div class="wbm-service-card">
+                        <span class="wbm-service-icon">📱</span>
+                        <div class="wbm-service-card-title">Social Media Management</div>
+                        <div class="wbm-service-card-desc">Consistent, on-brand posting across the platforms where your audience actually spends time — without you having to think about it.</div>
+                        <ul class="wbm-deliverables">
+                            <li>Monthly content calendar</li>
+                            <li>Designed graphics + captions</li>
+                            <li>Hashtag & timing strategy</li>
+                            <li>Engagement monitoring</li>
+                            <li>Monthly performance report</li>
                         </ul>
                     </div>
                 </div>
             </section>
-            
-            <section data-padding="none" data-unload="zoom-out">
-                <div class="bringer-expand-on-scroll">
-                    <img class="bringer-lazy" src="img/null.png" data-src="img/portfolio/portfolio03/image04.jpg" alt="Gaming Power" width="1920" height="960">
-                </div><!-- .bringer-expand-on-scroll -->
-            </section>
-            
-            <!-- Section: Results & Impact -->
-            <section>
-                <div class="stg-row">
-                    <div class="stg-col-6 stg-offset-6 stg-tp-col-10 stg-tp-offset-2" data-unload="fade-right">
-                        <h4 data-appear="fade-up">Beyond Gaming</h4>
-                        <p data-appear="fade-up" data-delay="100">Our journey with Xbox taught us that success knows no gravity. Whether your brand is navigating the uncharted expanse of a new market or simply needs a course correction, Bringer has the fuel and the ingenuity to propel you to unimaginable heights.</p>
+
+            <!-- Category 04: Our SEO Process -->
+            <section class="wbm-portfolio-section">
+                <div data-appear="fade-up">
+                    <span class="wbm-cat-number">Category 04</span>
+                    <h2 class="wbm-cat-title">How We Approach Every SEO Project</h2>
+                    <p class="wbm-cat-desc">Same process, every time — because consistency is what produces predictable results. Here's exactly what happens from the moment you reach out.</p>
+                </div>
+                <div class="wbm-process-grid" data-stagger-appear="fade-up" data-stagger-delay="100">
+                    <div class="wbm-process-step">
+                        <span class="wbm-step-number">Step 01</span>
+                        <div class="wbm-step-title">Free SEO Audit</div>
+                        <div class="wbm-step-desc">We crawl your site, review your current rankings, and put together a clear picture of what's holding you back — no charge, no obligation.</div>
+                    </div>
+                    <div class="wbm-process-step">
+                        <span class="wbm-step-number">Step 02</span>
+                        <div class="wbm-step-title">Strategy Call</div>
+                        <div class="wbm-step-desc">We walk you through the audit findings, agree on priorities, and build a roadmap with realistic timelines — so you know exactly what's planned and why.</div>
+                    </div>
+                    <div class="wbm-process-step">
+                        <span class="wbm-step-number">Step 03</span>
+                        <div class="wbm-step-title">Execution</div>
+                        <div class="wbm-step-desc">Technical fixes, on-page rewrites, content publishing, and link building — we handle implementation directly or coordinate with your team.</div>
+                    </div>
+                    <div class="wbm-process-step">
+                        <span class="wbm-step-number">Step 04</span>
+                        <div class="wbm-step-title">Monthly Reporting</div>
+                        <div class="wbm-step-desc">A clean, readable PDF every month showing ranking movements, traffic changes, links built, and what we're doing next — no jargon.</div>
                     </div>
                 </div>
             </section>
 
-            <!-- Section: Next Post -->
-            <section class="divider-top" data-appear="fade-up">
-                <div class="align-center" data-unload="zoom-in">
-                    <a href="portfolio-post04.html" class="bringer-icon-link bringer-next-post">
-                        <div class="bringer-icon-link-content">
-                            <h6>Next Project</h6>
-                            <h2>Riot Energy</h2>
-                        </div>
-                        <div class="bringer-icon-wrap">
-                            <i class="bringer-icon bringer-icon-explore"></i>
-                        </div>
-                    </a><!-- .bringer-icon-link -->
+            <!-- Category 05: Free Audit Breakdown -->
+            <section class="wbm-portfolio-section">
+                <div data-appear="fade-up">
+                    <span class="wbm-cat-number">Category 05</span>
+                    <h2 class="wbm-cat-title">What's in the Free SEO Audit</h2>
+                    <p class="wbm-cat-desc">The audit is real work — not an automated report you could generate yourself. It takes us 2–3 hours per site and covers the areas that actually impact rankings.</p>
+                </div>
+                <div class="wbm-audit-card" data-appear="fade-up">
+                    <div class="wbm-service-card-title" style="font-size: 20px;">Free SEO Audit — Delivered Within 48 Hours</div>
+                    <div class="wbm-service-card-desc" style="margin-top: 8px;">Share your website URL and we'll send back a detailed audit covering the points below — PDF format, no login required, no strings attached.</div>
+                    <ul class="wbm-checklist">
+                        <li>Crawlability & indexing status</li>
+                        <li>Page speed & Core Web Vitals score</li>
+                        <li>Title tag & meta description review</li>
+                        <li>Header structure analysis (H1–H3)</li>
+                        <li>Mobile usability assessment</li>
+                        <li>Broken links & redirect issues</li>
+                        <li>Keyword ranking snapshot (top 10 terms)</li>
+                        <li>Competitor comparison (top 2 rivals)</li>
+                        <li>Backlink profile overview</li>
+                        <li>Google Business Profile check</li>
+                        <li>Schema markup presence</li>
+                        <li>Prioritized action list with next steps</li>
+                    </ul>
+                </div>
+                <div class="wbm-meta-row">
+                    <div class="wbm-meta-item">
+                        <label>Price</label>
+                        <span>100% Free</span>
+                    </div>
+                    <div class="wbm-meta-item">
+                        <label>Delivery Time</label>
+                        <span>Within 48 Hours</span>
+                    </div>
+                    <div class="wbm-meta-item">
+                        <label>Format</label>
+                        <span>PDF Report</span>
+                    </div>
+                    <div class="wbm-meta-item">
+                        <label>Commitment Required</label>
+                        <span>None</span>
+                    </div>
                 </div>
             </section>
+
+            <!-- CTA Section -->
+            <section class="divider-top" data-appear="fade-up">
+                <div class="wbm-audit-cta" data-unload="zoom-in">
+                    <span class="wbm-audit-badge">Free · No Obligation · 48-Hour Delivery</span>
+                    <h2>Get Your Free SEO Audit</h2>
+                    <p>Send us your URL and we'll come back with a full audit of what's hurting your rankings — and what to fix first.</p>
+                    <a href="contacts.html" class="bringer-button">Request Your Free Audit</a>
+                </div>
+            </section>
+
         </div><!-- .stg-container -->
 
         <!-- Footer -->
         <footer id="bringer-footer" data-appear="fade-up" data-unload="fade-down">
-            <!-- Footer Widgets Area -->
             <div class="bringer-footer-widgets">
                 <div class="stg-container">
                     <div class="stg-row" data-stagger-appear="fade-left" data-stagger-delay="100">
                         <div class="stg-col-5 stg-tp-col-12 stg-tp-bottom-gap-l">
                             <div class="bringer-info-widget">
                                 <a href="index.html" class="bringer-logo footer-logo">
-                                    <img src="img/logo.png" alt="Webomize." width="150" height="24">
+                                    <img src="img/logo.png" alt="Webomize" width="150" height="24">
                                 </a>
-                                <div class="bringer-info-description">We are a passionate team of developers and designers who believe in the power of creativity. We help creative people create a strong online presence that shows their work and tells a story.</div>
+                                <div class="bringer-info-description">We are a passionate team of developers and designers who believe in the power of creativity. We help businesses create a strong online presence.</div>
                                 <span class="bringer-label">Follow us:</span>
                                 <ul class="bringer-socials-list" data-stagger-appear="fade-up" data-stagger-delay="75">
-                                    <li>
-                                        <a href="#" target="_blank" class="bringer-socials-facebook">
-                                            <i></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" class="bringer-socials-instagram">
-                                            <i></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" class="bringer-socials-x">
-                                            <i></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" class="bringer-socials-tiktok">
-                                            <i></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" class="bringer-socials-patreon">
-                                            <i></i>
-                                        </a>
-                                    </li>
+                                    <li><a href="#" target="_blank" class="bringer-socials-facebook"><i></i></a></li>
+                                    <li><a href="#" target="_blank" class="bringer-socials-instagram"><i></i></a></li>
+                                    <li><a href="#" target="_blank" class="bringer-socials-x"><i></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -306,75 +647,58 @@
                                 <h6>Services</h6>
                                 <div class="bringer-menu-widget">
                                     <ul>
-                                        <li><a href="service-details.html">Branding</a></li>
-                                        <li><a href="service-details.html">Marketing</a></li>
-                                        <li><a href="service-details.html">Graphic Design</a></li>
-                                        <li><a href="service-details.html">Web Design</a></li>
-                                        <li><a href="service-details.html">Content Creation</a></li>
+                                        <li><a href="services.html">Web Design</a></li>
+                                        <li><a href="services.html">E-Commerce</a></li>
+                                        <li><a href="services.html">Full Stack Apps</a></li>
+                                        <li><a href="services.html">SEO</a></li>
                                     </ul>
                                 </div>
-                            </div><!-- .bringer-widget -->
+                            </div>
                         </div>
                         <div class="stg-col-2 stg-tp-col-4 stg-m-col-4">
                             <div class="bringer-widget">
-                                <h6>About Us</h6>
+                                <h6>Company</h6>
                                 <div class="bringer-menu-widget">
                                     <ul>
                                         <li><a href="about-us.html">About Us</a></li>
-                                        <li><a href="about-me.html">About Me</a></li>
-                                        <li><a href="team-member.html">Our Team</a></li>
+                                        <li><a href="portfolio-post01.html">Portfolio</a></li>
                                         <li><a href="testimonials.html">Testimonials</a></li>
-                                        <li><a href="contacts.html">Get in Touch</a></li>
+                                        <li><a href="contacts.html">Contact</a></li>
                                     </ul>
                                 </div>
-                            </div><!-- .bringer-widget -->
+                            </div>
                         </div>
                         <div class="stg-col-2 stg-tp-col-4 stg-m-col-4">
                             <div class="bringer-widget">
-                                <h6>Resources</h6>
+                                <h6>Contact</h6>
                                 <div class="bringer-menu-widget">
                                     <ul>
-                                        <li><a href="pricing.html">Pricing</a></li>
-                                        <li><a href="faq.html">Help Center</a></li>
-                                        <li><a href="services.html">Our Services</a></li>
-                                        <li><a href="#">Terms of Use</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="tel:+923286561587">+92 328 6561587</a></li>
+                                        <li><a href="tel:+923274435919">+92 327 4435919</a></li>
+                                        <li><a href="https://wa.me/923286561587" target="_blank">WhatsApp</a></li>
+                                        <li><a href="contacts.html">Send a Message</a></li>
                                     </ul>
                                 </div>
-                            </div><!-- .bringer-widget -->
+                            </div>
                         </div>
-                    </div><!-- .stg-row -->
-                </div><!-- .stg-container -->
-            </div><!-- .bringer-footer-widgets -->
-
-            <!-- Footer Copyright Line -->
+                    </div>
+                </div>
+            </div>
             <div class="bringer-footer-line stg-container">
                 <div class="align-center">
-                    Copyright &copy; 2024. All Rights Reserved.
+                    Copyright &copy; 2026 Webomize. All Rights Reserved.
                 </div>
-            </div><!-- bringer-footer-line -->
+            </div>
         </footer>
-	</main>
+    </main>
 
-    <!-- Right Click Protection Block -->
-    <div class="bringer-rcp-wrap">
-        <div class="bringer-rcp-overlay"></div>
-        <div class="bringer-rcp-container">
-            <h2>The context menu is not allowed on this page.</h2>
-        </div>
-    </div>
-
-    <!-- Dynamic Backlight -->
     <div class="bringer-backlight"></div>
 
-    <!-- JS Scripts -->
     <script src="js/lib/jquery.min.js"></script>
     <script src="js/lib/libs.js"></script>
-    <script src="js/contact_form.js"></script>
     <script src="js/st-core.js"></script>
     <script src="js/classes.js"></script>
     <script src="js/main.js"></script>
 </body>
-
-<!-- Mirrored from demo.shadow-themes.com/html/bringer/portfolio-post03.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 May 2024 11:42:33 GMT -->
 </html>
+```
