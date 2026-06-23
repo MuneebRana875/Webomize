@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,6 +61,7 @@
         }
         .wbm-design-grid.cols-2 {
             grid-template-columns: repeat(2, 1fr);
+            align-items: stretch;
         }
         .wbm-design-card {
             border-radius: 12px;
@@ -67,6 +69,8 @@
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.08);
             transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
         .wbm-design-card:hover {
             transform: translateY(-6px);
@@ -78,18 +82,23 @@
             object-fit: cover;
             object-position: top;
             display: block;
+            flex-shrink: 0;
         }
         .wbm-design-card.is-tall img {
-            height: 380px;
+            height: auto;
+            flex: 1;
+            min-height: 300px;
         }
         .wbm-design-card.is-logo img {
-            height: 220px;
+            flex: 1;
             object-fit: contain;
             background: #fff;
             padding: 30px;
+            min-height: 300px;
         }
         .wbm-design-caption {
             padding: 18px 20px;
+            flex-shrink: 0;
         }
         .wbm-design-caption-title {
             font-size: 15px;
@@ -135,7 +144,6 @@
 
     <header id="bringer-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
         <div class="bringer-header-inner">
-            
             <div class="bringer-header-lp">
                 <a href="index.html" class="bringer-logo">
                     <img src="img/logo.png" alt="Webomize" width="150" height="24">
@@ -144,59 +152,34 @@
             <div class="bringer-header-mp">
                 <nav class="bringer-nav">
                     <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
-                        <li>
-                            <a href="index.html">Home</a>    
-                        </li>
+                        <li><a href="index.html">Home</a></li>
                         <li>
                             <a href="#">About Us</a>
                             <ul class="sub-menu">
-                                <li>
-                                    <a href="about-us.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="about-me.html">About Me</a>
-                                </li>
-                               
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="about-me.html">About Me</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#">Resources</a>
                             <ul class="sub-menu">
-                                <li>
-                                    <a href="services.html">Our Services</a>
-                                </li>
-                                <li>
-                                    <a href="service-details.html">Service Details</a>
-                                </li>
-                                <li>
-                                    <a href="pricing.html">Pricing</a>
-                                </li>
-                                <li>
-                                    <a href="faq.html">F.A.Q.</a>
-                                </li>
-                                <li>
-                                    <a href="testimonials.html">Testimonials</a>
-                                </li>
+                                <li><a href="services.html">Our Services</a></li>
+                                <li><a href="service-details.html">Service Details</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="faq.html">F.A.Q.</a></li>
+                                <li><a href="testimonials.html">Testimonials</a></li>
                             </ul>
                         </li>
                         <li class="current-menu-parent">
                             <a href="#">Portfolio</a>
                             <ul class="sub-menu">
                                 <li></li>
-                                <li>
-                                    <a href="portfolio-post01.html">Portfolio Details 01</a>
-                                </li>
-                                <li class="current-menu-item">
-                                    <a href="portfolio-post02.html">Portfolio Details 02</a>
-                                </li>
-                                <li>
-                                    <a href="portfolio-post03.html">Portfolio Details 03</a>
-                                </li>
+                                <li><a href="portfolio-post01.html">Portfolio Details 01</a></li>
+                                <li class="current-menu-item"><a href="portfolio-post02.html">Portfolio Details 02</a></li>
+                                <li><a href="portfolio-post03.html">Portfolio Details 03</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="contacts.html">Contacts</a>
-                        </li>
+                        <li><a href="contacts.html">Contacts</a></li>
                     </ul>
                 </nav>
             </div>
@@ -210,9 +193,7 @@
             </a>
             <a href="#" class="bringer-mobile-menu-toggler">
                 <i class="bringer-menu-toggler-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </i>
             </a>
         </div>
@@ -233,7 +214,7 @@
                 </div>
             </section>
 
-            <!-- ===================== CATEGORY 01: BRANDING & PRODUCT DESIGN ===================== -->
+            <!-- CATEGORY 01: BRANDING & PRODUCT DESIGN -->
             <section class="wbm-portfolio-section backlight-top">
                 <div data-appear="fade-up">
                     <span class="wbm-cat-number">Category 01</span>
@@ -264,7 +245,7 @@
                 </div>
             </section>
 
-            <!-- ===================== CATEGORY 02: MARKETING & SOCIAL MEDIA CREATIVES ===================== -->
+            <!-- CATEGORY 02: MARKETING & SOCIAL MEDIA CREATIVES -->
             <section class="wbm-portfolio-section">
                 <div data-appear="fade-up">
                     <span class="wbm-cat-number">Category 02</span>
@@ -323,7 +304,7 @@
                 </div>
             </section>
 
-            <!-- ===================== CATEGORY 03: PRINT, BROCHURE & FLYER DESIGN ===================== -->
+            <!-- CATEGORY 03: PRINT, BROCHURE & FLYER DESIGN -->
             <section class="wbm-portfolio-section">
                 <div data-appear="fade-up">
                     <span class="wbm-cat-number">Category 03</span>
